@@ -81,5 +81,5 @@ AVG(escape_attempts) as Avg_Escape_Attempts
 FROM animals
 WHERE
 date_of_birth >= '1990-01-01' AND
-date_of_birth <= '2000-01-01'
+date_of_birth <= '2000-12-31'
 GROUP BY species;
