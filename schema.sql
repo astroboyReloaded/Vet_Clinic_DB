@@ -12,4 +12,22 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals
-ADD COLUMN species varchar(24);
+ADD COLUMN species VARCHAR(24);
+
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name VARCHAR,
+    age INT
+);
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR
+);
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+ALTER TABLE animals
+ADD COLUMN species_id INT;
+
