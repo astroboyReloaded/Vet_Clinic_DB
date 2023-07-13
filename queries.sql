@@ -83,3 +83,57 @@ WHERE
 date_of_birth >= '1990-01-01' AND
 date_of_birth <= '2000-12-31'
 GROUP BY species;
+
+SELECT full_name, name AS animals
+FROM animals JOIN owners
+ON animals.owner_id = owners.id
+WHERE owners.id = 4;
+
+SELECT species.name AS species,
+animals.name 
+FROM animals JOIN species
+ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';
+
+SELECT
+  full_name AS owner,
+  animals.name AS animal
+FROM owners LEFT JOIN animals
+ON owners.id = animals.owner_id;
+
+SELECT
+  species.name AS species,
+  COUNT (species_id)
+FROM animals JOIN species
+ON animals.species_id = species.id
+GROUP BY species;
+
+SELECT
+species.name AS species,
+animals.name AS animal_name,
+owners.full_name as owner_name
+FROM owners
+JOIN animals
+ON owner_id = owners.id
+JOIN species
+ON species_id = species.id
+WHERE species.name = 'Digimon'
+AND full_name = 'Jennifer Orwell';
+
+SELECT
+animals.name AS animal_name,
+owners.full_name AS owner_name,
+escape_attempts
+FROM animals
+JOIN owners
+ON owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester'
+AND escape_attempts = 0;
+
+SELECT full_name AS owner_name,
+COUNT(owner_id) AS animals
+FROM owners JOIN animals
+ON owner_id = owners.id
+GROUP BY full_name
+ORDER BY COUNT(owner_id) DESC
+LIMIT 1;
