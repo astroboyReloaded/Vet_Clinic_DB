@@ -114,7 +114,9 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- [Live Demo Link](https://drawsql.app/teams/gerson-higgins-team/diagrams/vet-clinic)
+![image](https://github.com/astroboyReloaded/Vet_Clinic_DB/assets/98507967/d11d552b-fbea-4c4f-8fe6-b596b145770e)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
